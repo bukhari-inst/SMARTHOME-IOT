@@ -18,9 +18,9 @@ const long interval = 3000;
 //variabel array untuk data parsing
 String arrData[2];
 
-const char* ssid = "@NOAH_ID";
+const char* ssid = "@NOAH_Site";
 const char* password = "@NOAH_Site";
-const char* host = "192.168.0.105"; //alamatipserver 192.168.0.105 mysmarthome.bukhariinst.ga
+const char* host = "192.168.43.126"; //alamatipserver 192.168.0.105 mysmarthome.bukhariinst.ga
 
 bool Parsing = false;
 String dataPHP, data[8], dataPHP2, data2[8], dataPHP3, data3[8], dataPHP4, data4[8];
@@ -321,7 +321,7 @@ void loop()
   //
   String Link;
   HTTPClient http;
-  Link = "http://192.168.0.105/WEB-Smarthome-IOT/kirimdata.php?sensor=" + String(ldr);
+  Link = "http://192.168.43.126/WEB-Smarthome-IOT/kirimdata.php?sensor=" + String(ldr);
   //eksekusi link
   http.begin(Link);
   //mode GET
@@ -338,7 +338,7 @@ void loop()
   //proses kirim data ke serversss
   String Link2;
   HTTPClient http2;
-  Link2 = "http://192.168.0.105/WEB-Smarthome-IOT/kirimdata2.php?sensor2=" + String(suhu2);
+  Link2 = "http://192.168.43.126/WEB-Smarthome-IOT/kirimdata2.php?sensor2=" + String(suhu2);
   //eksekusi link
   http2.begin(Link2);
   //mode GET
