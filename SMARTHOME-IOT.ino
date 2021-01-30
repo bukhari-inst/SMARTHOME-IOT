@@ -71,7 +71,7 @@ void loop()
     //    Serial.println("connected");
     //    Serial.println("Sending a request");
 
-    String url = "SMARTHOME-IOT/baca-data.php?id=1"; // Lokasi File Baca Data IOT_Test/
+    String url = "WEB-Smarthome-IOT/baca-data.php?id=1"; // Lokasi File Baca Data IOT_Test/
     client.print(String("GET /") + url + " HTTP/1.1\r\n" +
                  "Host: " + host + "\r\n" +
                  "Connection: close\r\n" +
@@ -119,7 +119,7 @@ void loop()
     //    Serial.println("connected");
     //    Serial.println("Sending a request");
 
-    String url = "SMARTHOME-IOT/baca-data.php?id=2"; // Lokasi File Baca Data IOT_Test/
+    String url = "WEB-Smarthome-IOT/baca-data.php?id=2"; // Lokasi File Baca Data IOT_Test/
     client.print(String("GET /") + url + " HTTP/1.1\r\n" +
                  "Host: " + host + "\r\n" +
                  "Connection: close\r\n" +
@@ -167,7 +167,7 @@ void loop()
     //    Serial.println("connected");
     //    Serial.println("Sending a request");
 
-    String url = "SMARTHOME-IOT/baca-data.php?id=3"; // Lokasi File Baca Data IOT_Test/
+    String url = "WEB-Smarthome-IOT/baca-data.php?id=3"; // Lokasi File Baca Data IOT_Test/
     client.print(String("GET /") + url + " HTTP/1.1\r\n" +
                  "Host: " + host + "\r\n" +
                  "Connection: close\r\n" +
@@ -215,7 +215,7 @@ void loop()
     //    Serial.println("connected");
     //    Serial.println("Sending a request");
 
-    String url = "SMARTHOME-IOT/baca-data.php?id=4"; // Lokasi File Baca Data IOT_Test/
+    String url = "WEB-Smarthome-IOT/baca-data.php?id=4"; // Lokasi File Baca Data IOT_Test/
     client.print(String("GET /") + url + " HTTP/1.1\r\n" +
                  "Host: " + host + "\r\n" +
                  "Connection: close\r\n" +
@@ -321,7 +321,7 @@ void loop()
   //
   String Link;
   HTTPClient http;
-  Link = "http://192.168.0.105/SMARTHOME-IOT/kirimdata.php?sensor=" + String(ldr);
+  Link = "http://192.168.0.105/WEB-Smarthome-IOT/kirimdata.php?sensor=" + String(ldr);
   //eksekusi link
   http.begin(Link);
   //mode GET
@@ -329,7 +329,7 @@ void loop()
   http.end();
   //
   int sensor2 = analogRead(ldrpin);
-  float suhu2 = (sensor2 / 2.0479) - 19;
+  float suhu2 = (sensor2 / 2.0479) - 22;
   //    Serial.print("data= ");
   //    Serial.println(sensor2);
   //    Serial.print("sensor suhu= ");
@@ -338,7 +338,7 @@ void loop()
   //proses kirim data ke serversss
   String Link2;
   HTTPClient http2;
-  Link2 = "http://192.168.0.105/SMARTHOME-IOT/kirimdata2.php?sensor2=" + String(suhu2);
+  Link2 = "http://192.168.0.105/WEB-Smarthome-IOT/kirimdata2.php?sensor2=" + String(suhu2);
   //eksekusi link
   http2.begin(Link2);
   //mode GET
