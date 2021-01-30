@@ -329,7 +329,7 @@ void loop()
   http.end();
   //
   int sensor2 = analogRead(ldrpin);
-  float suhu2 = (sensor2 / 2.0479) - 22;
+  float suhu2 = (sensor2 / 2.0479) - 20;
   //    Serial.print("data= ");
   //    Serial.println(sensor2);
   //    Serial.print("sensor suhu= ");
